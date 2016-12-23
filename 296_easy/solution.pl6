@@ -2,10 +2,9 @@ use v6;
 
 my @days = < first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth>;
 my @numbers = < a two three four five six seven eight nine ten eleven twelve>;
-#my $i = 0;
 my @gifts = 'input.txt'.IO.lines;
 
-for [0 .. @days.elems] -> $i {
+for [0 .. @days.end] -> $i {
 	say "On the " ~ @days[$i] ~ " day of Christmas";
     say "my true love sent to me: ";
 	if $i == 0 {
@@ -17,6 +16,5 @@ for [0 .. @days.elems] -> $i {
 			say @numbers[$j]~ " " ~ @gifts[$j]; 
 		}
 	}
-	#$i++;
 	say "\n";		
 }
